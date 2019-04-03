@@ -6,6 +6,15 @@ import { history } from '../_helpers';
 import { alertActions } from '../_actions';
 import { IndexPage } from '../IndexPage';
 import { AuthedPage } from '../AuthedPage';
+import { Redirect } from 'react-router-dom';
+
+const PrivateRoute = ({ component: Component, ...rest }) => (
+    <Route {...rest} render={props => (
+        localStorage.getItem('user')
+            ? <Component {...props} />
+            : <Redirect to={{ pathname: '/', state: { from: props.location } }} />
+    )} />
+)
 
 class App extends React.Component {
     constructor(props) {
@@ -30,7 +39,7 @@ class App extends React.Component {
                 <Router history={history}>
                     <div>
                         <Route exact path="/" component={IndexPage} />
-                        <Route path="/authed" component={AuthedPage} />
+                        <PrivateRoute path="/authed" component={AuthedPage} />
                     </div>
                 </Router>
             </div>
