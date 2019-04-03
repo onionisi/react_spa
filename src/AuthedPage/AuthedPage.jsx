@@ -14,7 +14,7 @@ class AuthedPage extends React.Component {
         return (
             <div class="row">
                 <div id="disp" className="col">
-                    <div className="mx-4 my-5">
+                    <div className="m-4">
                         <h5>User List:</h5>
                         <br/>
                         {users.loading && <em>Loading users...</em>}

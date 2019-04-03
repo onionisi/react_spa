@@ -31,11 +31,9 @@ class App extends React.Component {
         const { alert } = this.props;
         return (
             <div className="container">
-                <div id="disp" className="col">
-                    {alert.message &&
-                            <div className={`alert ${alert.type}`}>{alert.message}</div>
-                    }
-                </div>
+                {alert.message &&
+                        <div id="disp" className={`alert ${alert.type}`}>{alert.message}</div>
+                }
                 <Router history={history}>
                     <div>
                         <Route exact path="/" component={IndexPage} />
