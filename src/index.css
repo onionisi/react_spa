@@ -1,0 +1,45 @@
+img {
+    height: 100px;
+    margin: 20px 50px;
+}
+
+footer, nav {
+    width: 100%;
+    background-size: cover;
+    background-color: #ACC435;
+    padding: 10px;
+}
+
+footer p {
+    margin: auto 50px;
+}
+
+#content {
+    background:
+        url(https://d20xd7mbt7xiju.cloudfront.net/test/tasmania/tasmania-background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 40px;
+    font-size: 12px;
+}
+
+#disp, #register, #login {
+    color: white;
+    background-color: rgba(0,0,0,0.5);
+    background-size: cover;
+}
+#register {
+    margin: 40px 20px 40px 50px;
+}
+#login {
+    margin: 40px 50px 40px 20px;
+}
+#disp {
+    margin: 40px 40px 40px 40px;
+}
+#disp li {
+    color: black;
+}
+#disp img {
+    height: 80px;
+}
