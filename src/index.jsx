@@ -2,10 +2,8 @@ import React from 'react';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
 
-import { createStore } from 'react';
+import { store } from './_helpers';
 import { App } from './App';
-
-let store = createStore();
 
 render(
     <Provider store={store}>
